@@ -1,0 +1,290 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#F0F0F0"
+        android:orientation="vertical"
+        tools:context=".activity.SettingActivity">
+
+    <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar_article"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="#FFFFFF"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar"
+            app:navigationIcon="@drawable/arrow_go_back"
+            app:titleMargin="4dp"
+            app:titleTextColor="#000000">
+
+        <TextView
+                android:id="@+id/setting_title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="@android:dimen/app_icon_size"
+                android:gravity="center"
+                android:text="设置    "
+                android:textColor="#1C1B1B"
+                android:textSize="20sp"
+                android:textStyle="bold">
+
+        </TextView>
+
+    </androidx.appcompat.widget.Toolbar>
+
+    <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/settingMe"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="#F0F0F0"
+                app:layout_constraintBottom_toBottomOf="@+id/privacySetting"
+                app:layout_constraintEnd_toEndOf="@+id/version"
+                app:layout_constraintStart_toEndOf="@+id/version"
+                app:layout_constraintTop_toBottomOf="@+id/privacySetting">
+
+
+            <Button
+                    android:id="@+id/send"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="4dp"
+                    android:background="#FFFFFF"
+                    android:drawableRight="@drawable/arrow_right"
+                    android:gravity="left|center_vertical"
+                    android:text="    推送设置"
+                    android:textStyle="bold"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.0"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/accountManagement" />
+
+            <Button
+                    android:id="@+id/button_logout"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="4dp"
+                    android:background="#FFFFFF"
+                    android:text="退出登录"
+                    android:enabled="false"
+                    android:textStyle="bold"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.0"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/invitation" />
+
+            <Button
+                    android:id="@+id/helpCenter"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="4dp"
+                    android:background="#FFFFFF"
+                    android:drawableRight="@drawable/arrow_right"
+                    android:gravity="left|center_vertical"
+                    android:text="    帮助中心&amp;问题反馈"
+                    android:textStyle="bold"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.0"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/privacySetting" />
+
+            <Button
+                    android:id="@+id/invitation"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:background="#FFFFFF"
+                    android:drawableRight="@drawable/arrow_right"
+                    android:gravity="left|center_vertical"
+                    android:text="    邀请好友"
+                    android:textStyle="bold"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.0"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/privacyPolicy" />
+
+            <TextView
+                    android:id="@+id/symbol"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="4dp"
+                    android:text="GameBox"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.5"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/button_logout" />
+
+            <Button
+                    android:id="@+id/setting"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:background="#FFFFFF"
+                    android:drawableRight="@drawable/arrow_right"
+                    android:gravity="left|center_vertical"
+                    android:text="    通用设置"
+                    android:textStyle="bold"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.0"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/send" />
+
+            <TextView
+                    android:id="@+id/version"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginLeft="8dp"
+                    android:text="V1.0.0"
+                    app:layout_constraintStart_toStartOf="@+id/symbol"
+                    app:layout_constraintTop_toBottomOf="@+id/symbol" />
+
+            <Button
+                    android:id="@+id/accountManagement"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:background="#FFFFFF"
+                    android:drawableRight="@drawable/arrow_right"
+                    android:gravity="left|center_vertical"
+                    android:text="    游戏账号管理"
+                    android:textStyle="bold"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.0"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/save" />
+
+            <Button
+                    android:id="@+id/aboutGameBox"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:background="#FFFFFF"
+                    android:drawableRight="@drawable/arrow_right"
+                    android:gravity="left|center_vertical"
+                    android:text="    关于GameBox"
+                    android:textStyle="bold"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.0"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/helpCenter" />
+
+            <Button
+                    android:id="@+id/privacySetting"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:background="#FFFFFF"
+                    android:drawableRight="@drawable/arrow_right"
+                    android:gravity="left|center_vertical"
+                    android:text="    隐私设置"
+                    android:textStyle="bold"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.0"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/setting" />
+
+            <Button
+                    android:id="@+id/privacyPolicy"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:background="#FFFFFF"
+                    android:drawableRight="@drawable/arrow_right"
+                    android:gravity="left|center_vertical"
+                    android:text="    隐私政策"
+                    android:textStyle="bold"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.0"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/aboutGameBox" />
+
+            <Button
+                    android:id="@+id/save"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:background="#FFFFFF"
+                    android:drawableRight="@drawable/arrow_right"
+                    android:gravity="left|center_vertical"
+                    android:text="    安全与绑定"
+                    android:textStyle="bold"
+                    app:layout_constraintBottom_toTopOf="@+id/accountManagement"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.0"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="@+id/layout_update" />
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/layout_update"
+                    android:layout_width="0dp"
+                    android:layout_height="108dp"
+                    android:layout_marginBottom="4dp"
+                    android:background="#FFFFFF"
+                    app:layout_constraintBottom_toTopOf="@+id/save"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.0"
+                    app:layout_constraintStart_toStartOf="parent">
+
+                <top.naccl.gamebox.util.RoundImageView
+                        android:id="@+id/imageView_avatar"
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:layout_marginStart="16dp"
+                        android:layout_marginLeft="16dp"
+                        android:layout_marginTop="30dp"
+                        android:layout_marginBottom="30dp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:srcCompat="@drawable/avatar_login_default" />
+
+                <TextView
+                        android:id="@+id/textView_username"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="20dp"
+                        android:layout_marginLeft="20dp"
+                        android:layout_marginTop="30dp"
+                        android:text="Username"
+                        android:textColor="#201E1E"
+                        android:textSize="18sp"
+                        android:textStyle="bold"
+                        app:layout_constraintStart_toEndOf="@+id/imageView_avatar"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                        android:id="@+id/textView_id"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:text="ID:10000"
+                        app:layout_constraintStart_toStartOf="@+id/textView_username"
+                        app:layout_constraintTop_toBottomOf="@+id/textView_username" />
+
+                <TextView
+                        android:id="@+id/textView8"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="12dp"
+                        android:layout_marginRight="12dp"
+                        android:layout_marginBottom="6dp"
+                        android:text="修改"
+                        android:textColor="#121111"
+                        app:layout_constraintBottom_toBottomOf="@+id/imageView4"
+                        app:layout_constraintEnd_toStartOf="@+id/imageView4" />
+
+                <ImageView
+                        android:id="@+id/imageView4"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="381dp"
+                        android:layout_marginLeft="381dp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:srcCompat="@drawable/arrow_right" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
+
+
+</LinearLayout>

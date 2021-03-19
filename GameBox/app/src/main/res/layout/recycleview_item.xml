@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/constraintLayout"
+        android:layout_width="match_parent"
+        android:layout_height="90dp"
+        android:gravity="center"
+        android:textSize="20sp">
+
+    <TextView
+            android:id="@+id/textView_title"
+            android:layout_width="242dp"
+            android:layout_height="47dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginLeft="40dp"
+            android:layout_marginTop="5dp"
+            android:text="文章标题文章标题文章标题文章标题文章标题文章标题文章标题"
+            android:textColor="#000000"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+    </TextView>
+
+    <TextView
+            android:id="@+id/textView_date"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:text="1小时前"
+            android:textColor="#837D7D"
+            android:textSize="14dp"
+            app:layout_constraintStart_toStartOf="@+id/textView_title"
+            app:layout_constraintTop_toBottomOf="@+id/textView_title" />
+
+    <TextView
+            android:id="@+id/textView_views"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="2dp"
+            android:layout_marginLeft="220dp"
+            android:layout_marginBottom="10dp"
+            android:text="10000"
+            app:layout_constraintBottom_toBottomOf="@+id/imageView_firstPicture"
+            app:layout_constraintStart_toEndOf="@+id/imageView6"
+            app:layout_constraintTop_toTopOf="@+id/imageView6"
+            app:layout_constraintVertical_bias="0.384" />
+
+    <ImageView
+            android:id="@+id/imageView6"
+            android:layout_width="14dp"
+            android:layout_height="12dp"
+            android:layout_marginStart="136dp"
+            android:layout_marginLeft="136dp"
+            android:layout_marginBottom="4dp"
+            android:src="@drawable/icon_article_message"
+            app:layout_constraintBottom_toBottomOf="@+id/imageView_firstPicture"
+            app:layout_constraintStart_toEndOf="@+id/textView_date" />
+
+    <ImageView
+            android:id="@+id/imageView_firstPicture"
+            android:layout_width="153dp"
+            android:layout_height="77dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginRight="20dp"
+            android:src="@drawable/scrollimg2"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="top.naccl.mapper.ArticleMapper">
+    <!--文章列表-->
+    <select id="listArticle" resultType="top.naccl.model.entity.Article">
+        select id, title, date, first_picture, views from article order by id desc
+    </select>
+
+    <!--收藏夹文章-->
+    <select id="getFavoriteArticle" resultType="top.naccl.model.entity.Article">
+        select id, title, date, first_picture, views from article where id=#{id}
+    </select>
+
+    <!--按id查询文章-->
+    <select id="findById" resultType="top.naccl.model.entity.Article">
+        select * from article where id=#{id}
+    </select>
+
+    <!--文章访问量自增-->
+    <update id="updateViewsById" parameterType="top.naccl.model.entity.Article">
+        update article set views = views+1 where id=#{id}
+    </update>
+
+    <!--文章点赞自增-->
+    <update id="updateStarById" parameterType="top.naccl.model.entity.Article">
+        update article set star = star+1 where id=#{id}
+    </update>
+</mapper>

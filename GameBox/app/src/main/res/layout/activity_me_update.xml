@@ -1,0 +1,317 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#F0F0F0"
+        android:orientation="vertical"
+        tools:context=".activity.SettingActivity">
+
+    <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar_update"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="#FFFFFF"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar"
+            app:navigationIcon="@drawable/arrow_go_back"
+            app:titleMargin="4dp"
+            app:titleTextColor="#000000">
+
+        <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="@android:dimen/app_icon_size"
+                android:gravity="center"
+                android:text="      个人信息"
+                android:textColor="#1C1B1B"
+                android:textSize="20sp"
+                android:textStyle="bold"></TextView>
+
+    </androidx.appcompat.widget.Toolbar>
+
+    <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="#F0F0F0"
+                app:layout_constraintBottom_toBottomOf="@+id/privacySetting"
+                app:layout_constraintEnd_toEndOf="@+id/version"
+                app:layout_constraintStart_toEndOf="@+id/version"
+                app:layout_constraintTop_toBottomOf="@+id/privacySetting">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/constraintLayout3"
+                    android:layout_width="0dp"
+                    android:layout_height="100dp"
+                    android:layout_marginTop="1dp"
+                    android:background="#FFFFFF"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.0"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent">
+
+                <top.naccl.gamebox.util.RoundImageView
+                        android:id="@+id/imageView_avatar"
+                        android:layout_width="82dp"
+                        android:layout_height="70dp"
+                        android:layout_marginStart="312dp"
+                        android:layout_marginLeft="312dp"
+                        android:layout_marginTop="30dp"
+                        android:layout_marginEnd="15dp"
+                        android:layout_marginRight="15dp"
+                        android:layout_marginBottom="30dp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintVertical_bias="0.533"
+                        app:srcCompat="@drawable/avatar_login_default" />
+
+                <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="15dp"
+                        android:layout_marginLeft="15dp"
+                        android:layout_marginTop="41dp"
+                        android:layout_marginBottom="40dp"
+                        android:text="我的头像"
+                        android:textColor="#000000"
+                        android:textStyle="bold"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <TextView
+                    android:id="@+id/change_username"
+                    android:layout_width="73dp"
+                    android:layout_height="52dp"
+                    android:layout_marginTop="1dp"
+                    android:background="#FFFFFF"
+                    android:gravity="center"
+                    android:text="用户名"
+                    android:textColor="#000000"
+                    android:textStyle="bold"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/constraintLayout3" />
+
+            <TextView
+                    android:id="@+id/textView_username"
+                    android:layout_width="340dp"
+                    android:layout_height="52dp"
+                    android:layout_marginTop="1dp"
+                    android:background="#FFFFFF"
+                    android:gravity="right|center_vertical"
+                    android:paddingRight="15dp"
+                    android:text="username"
+                    android:textColor="#746C6C"
+                    android:textSize="12sp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@+id/change_username"
+                    app:layout_constraintTop_toBottomOf="@+id/constraintLayout3">
+
+            </TextView>
+
+            <TextView
+                    android:id="@+id/change_signature"
+                    android:layout_width="84dp"
+                    android:layout_height="52dp"
+                    android:layout_marginTop="1dp"
+                    android:background="#FFFFFF"
+                    android:gravity="center"
+                    android:text="个性签名"
+                    android:textColor="#000000"
+                    android:textStyle="bold"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/change_username" />
+
+            <EditText
+                    android:id="@+id/editText_introduction"
+                    android:layout_width="330dp"
+                    android:layout_height="52dp"
+                    android:layout_marginTop="1dp"
+                    android:background="#FFFFFF"
+                    android:gravity="right|center_vertical"
+                    android:hint="这个人懒死了什么也没写"
+                    android:paddingRight="15dp"
+                    android:textColor="#746C6C"
+                    android:textSize="12sp"
+                    app:layout_constraintStart_toEndOf="@+id/change_signature"
+                    app:layout_constraintTop_toBottomOf="@+id/textView_username">
+
+            </EditText>
+
+            <LinearLayout
+                    android:id="@+id/linearLayout_sex"
+                    android:layout_width="436dp"
+                    android:layout_height="52dp"
+                    android:layout_marginTop="1dp"
+                    android:orientation="horizontal"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/editText_introduction">
+
+                <TextView
+                        android:id="@+id/change_sex"
+                        android:layout_width="59dp"
+                        android:layout_height="match_parent"
+                        android:background="#FFFFFF"
+                        android:gravity="center"
+                        android:text="性别"
+                        android:textColor="#000000"
+                        android:textStyle="bold"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/change_username" />
+
+                <TextView
+                        android:id="@+id/textView_sex"
+                        android:layout_width="352dp"
+                        android:layout_height="match_parent"
+                        android:background="#FFFFFF"
+                        android:gravity="right|center_vertical"
+                        android:hint="(选填)"
+                        android:paddingRight="15dp"
+                        android:textColor="#746C6C"
+                        android:textSize="12sp"
+                        app:layout_constraintStart_toEndOf="@+id/change_signature"
+                        app:layout_constraintTop_toBottomOf="@+id/textView_username">
+
+                </TextView>
+            </LinearLayout>
+
+            <LinearLayout
+                    android:id="@+id/LinearLayout_birthday"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="1dp"
+                    android:orientation="horizontal"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/linearLayout_sex">
+
+                <TextView
+                        android:id="@+id/change_birthday"
+                        android:layout_width="59dp"
+                        android:layout_height="match_parent"
+                        android:background="#FFFFFF"
+                        android:gravity="center"
+                        android:text="生日"
+                        android:textColor="#000000"
+                        android:textStyle="bold" />
+
+                <TextView
+                        android:id="@+id/textView_birthday"
+                        android:layout_width="352dp"
+                        android:layout_height="52dp"
+                        android:background="#FFFFFF"
+                        android:gravity="right|center_vertical"
+                        android:hint="(选填)"
+                        android:paddingRight="15dp"
+                        android:textColor="#746C6C"
+                        android:textSize="12sp">
+
+                </TextView>
+            </LinearLayout>
+
+            <EditText
+                    android:id="@+id/editText_email"
+                    android:layout_width="353dp"
+                    android:layout_height="53dp"
+                    android:layout_marginTop="1dp"
+                    android:background="#FFFFFF"
+                    android:gravity="right|center_vertical"
+                    android:hint="请填写邮箱"
+                    android:paddingRight="15dp"
+                    android:textColor="#746C6C"
+                    android:textSize="12sp"
+                    app:layout_constraintStart_toEndOf="@+id/change_email"
+                    app:layout_constraintTop_toBottomOf="@+id/LinearLayout_birthday">
+
+            </EditText>
+
+            <TextView
+                    android:id="@+id/change_email"
+                    android:layout_width="57dp"
+                    android:layout_height="53dp"
+                    android:layout_marginTop="1dp"
+                    android:background="#FFFFFF"
+                    android:gravity="center"
+                    android:text="邮箱"
+                    android:textColor="#000000"
+                    android:textStyle="bold"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/LinearLayout_birthday" />
+
+            <LinearLayout
+                    android:id="@+id/linearLayout_education"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="1dp"
+                    android:orientation="horizontal"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/editText_email">
+
+                <TextView
+                        android:id="@+id/change_education"
+                        android:layout_width="82dp"
+                        android:layout_height="match_parent"
+                        android:background="#FFFFFF"
+                        android:gravity="center"
+                        android:text="教育经历"
+                        android:textColor="#000000"
+                        android:textStyle="bold" />
+
+                <TextView
+                        android:id="@+id/textView_education"
+                        android:layout_width="330dp"
+                        android:layout_height="52dp"
+                        android:background="#FFFFFF"
+                        android:gravity="right|center_vertical"
+                        android:hint="(选填)"
+                        android:paddingRight="15dp"
+                        android:textColor="#746C6C"
+                        android:textSize="12sp">
+
+                </TextView>
+            </LinearLayout>
+
+            <LinearLayout
+                    android:id="@+id/linearLayout_job"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="1dp"
+                    android:orientation="horizontal"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/linearLayout_education">
+
+                <TextView
+                        android:id="@+id/change_job"
+                        android:layout_width="59dp"
+                        android:layout_height="match_parent"
+                        android:background="#FFFFFF"
+                        android:gravity="center"
+                        android:text="职业"
+                        android:textColor="#000000"
+                        android:textStyle="bold" />
+
+                <TextView
+                        android:id="@+id/textView_job"
+                        android:layout_width="352dp"
+                        android:layout_height="52dp"
+                        android:background="#FFFFFF"
+                        android:gravity="right|center_vertical"
+                        android:hint="(选填)"
+                        android:paddingRight="15dp"
+                        android:textColor="#746C6C"
+                        android:textSize="12sp">
+
+                </TextView>
+            </LinearLayout>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
+
+</LinearLayout>

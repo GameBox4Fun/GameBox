@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="top.naccl.mapper.FavoriteMapper">
+    <!--用户收藏文章-->
+    <insert id="saveFavorite" parameterType="top.naccl.model.entity.Favorite" useGeneratedKeys="true" keyProperty="id">
+        insert into favorite (id,user_id,article_id) values (#{id},#{userId},#{articleId})
+    </insert>
+    
+    <delete id="removeFavorite" parameterType="top.naccl.model.entity.Favorite">
+        delete from favorite where id=#{id}
+    </delete>
+
+    <!--按用户id和文章id查询用户是否已收藏-->
+    <select id="findByUserIdAndArticleId" resultType="top.naccl.model.entity.Favorite">
+        select * from favorite where user_id=#{userId} and article_id=#{articleId}
+    </select>
+
+    <!--按用户id查询用户收藏夹-->
+    <select id="listFavoriteByUserId" resultType="top.naccl.model.entity.Favorite">
+        select * from favorite where user_id=#{userId} order by id desc
+    </select>
+
+    <select id="countFavoriteByUserId" resultType="java.lang.Integer">
+        select count(*) from favorite where user_id=#{userId}
+    </select>
+</mapper>

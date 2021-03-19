@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item
+            android:id="@+id/menu_game"
+            android:icon="@drawable/icon_community_game"
+            android:orderInCategory="1"
+            android:title="action_bar_me_scan"
+            app:showAsAction="ifRoom" />
+    <item
+            android:id="@+id/menu_search"
+            android:icon="@drawable/icon_community_find"
+            android:orderInCategory="1"
+            android:title="action_bar_me_search"
+            app:showAsAction="ifRoom" />
+    <item
+            android:id="@+id/menu_message"
+            android:icon="@drawable/message"
+            android:orderInCategory="1"
+            android:title="action_bar_me_message"
+            app:showAsAction="ifRoom" />
+
+</menu>

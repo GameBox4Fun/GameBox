@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        tools:context=".main.MainActivity">
+
+    <androidx.viewpager.widget.ViewPager
+            android:id="@+id/viewpager"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1">
+
+    </androidx.viewpager.widget.ViewPager>
+
+    <RadioGroup
+            android:id="@+id/radioGroup"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#ECECEC"
+            android:gravity="center_horizontal"
+            android:orientation="horizontal">
+
+        <RadioButton
+                android:id="@+id/radioButton1"
+                style="@style/rbStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:drawableTop="@drawable/home"
+                android:text="首页" />
+
+        <RadioButton
+                android:id="@+id/radioButton2"
+                style="@style/rbStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:drawableTop="@drawable/community"
+                android:text="社区" />
+
+        <RadioButton
+                android:id="@+id/radioButton3"
+                style="@style/rbStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:drawableTop="@drawable/me"
+                android:text="我" />
+    </RadioGroup>
+</LinearLayout>

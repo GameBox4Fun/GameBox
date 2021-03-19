@@ -1,0 +1,171 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:id="@+id/goToLogin"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        tools:context=".activity.MeLoginActivity">
+
+    <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar_me"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="#FFFFFF"
+            android:clickable="false"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar"
+            app:titleMargin="4dp"
+            app:titleTextColor="#000000">
+
+        <TextView
+                android:id="@+id/personCenter"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="@android:dimen/app_icon_size"
+                android:text="个人中心"
+                android:textColor="#1C1B1B"
+                android:textSize="24sp"
+                android:textStyle="bold">
+        </TextView>
+
+    </androidx.appcompat.widget.Toolbar>
+
+    <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                app:layout_constraintEnd_toEndOf="@+id/userName"
+                app:layout_constraintStart_toEndOf="@+id/userName">
+
+            <top.naccl.gamebox.util.RoundImageView
+                    android:id="@+id/imageView_avatar"
+                    android:layout_width="0dp"
+                    android:layout_height="80dp"
+                    android:layout_marginStart="12dp"
+                    android:layout_marginLeft="12dp"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginEnd="18dp"
+                    android:layout_marginRight="18dp"
+                    app:layout_constraintEnd_toStartOf="@+id/textView_username"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:srcCompat="@drawable/avatar_login_default" />
+
+            <TextView
+                    android:id="@+id/textView_username"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginEnd="207dp"
+                    android:layout_marginRight="207dp"
+                    android:layout_marginBottom="12dp"
+                    android:text="未登录"
+                    android:textColor="#584D4D"
+                    android:textSize="30sp"
+                    android:textStyle="bold"
+                    app:layout_constraintBottom_toTopOf="@+id/textView_introduction"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@+id/imageView_avatar"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                    android:id="@+id/textView_introduction"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginLeft="16dp"
+                    android:layout_marginTop="20dp"
+                    android:text="点击编辑个性签名"
+                    app:layout_constraintStart_toEndOf="@+id/imageView_avatar"
+                    app:layout_constraintTop_toBottomOf="@+id/textView_username" />
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/imageView_avatar">
+
+                <TextView
+                        android:id="@+id/textView2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="97dp"
+                        android:layout_marginLeft="97dp"
+                        android:layout_marginBottom="7dp"
+                        android:text="0"
+                        android:textSize="24sp"
+                        android:textStyle="bold"
+                        app:layout_constraintBottom_toTopOf="@+id/afterLogin3"
+                        app:layout_constraintStart_toStartOf="parent" />
+
+                <TextView
+                        android:id="@+id/afterLogin3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="关注"
+                        app:layout_constraintBottom_toBottomOf="@+id/afterLogin2"
+                        app:layout_constraintEnd_toEndOf="@+id/textView2"
+                        app:layout_constraintStart_toStartOf="@+id/textView2" />
+
+                <TextView
+                        android:id="@+id/textView4"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="88dp"
+                        android:layout_marginLeft="88dp"
+                        android:layout_marginEnd="88dp"
+                        android:layout_marginRight="88dp"
+                        android:layout_marginBottom="7dp"
+                        android:text="0"
+                        android:textSize="24sp"
+                        android:textStyle="bold"
+                        app:layout_constraintBottom_toTopOf="@+id/afterLogin2"
+                        app:layout_constraintEnd_toStartOf="@+id/textView_favoriteNum"
+                        app:layout_constraintStart_toEndOf="@+id/textView2" />
+
+                <TextView
+                        android:id="@+id/afterLogin2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="粉丝"
+                        app:layout_constraintBottom_toBottomOf="@+id/textView_favoriteText"
+                        app:layout_constraintEnd_toEndOf="@+id/textView4"
+                        app:layout_constraintStart_toStartOf="@+id/textView4" />
+
+                <TextView
+                        android:id="@+id/textView_favoriteNum"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="6dp"
+                        android:text="0"
+                        android:textSize="24sp"
+                        android:textStyle="bold"
+                        app:layout_constraintBottom_toTopOf="@+id/textView_favoriteText"
+                        app:layout_constraintEnd_toEndOf="@+id/textView_favoriteText"
+                        app:layout_constraintStart_toStartOf="@+id/textView_favoriteText" />
+
+                <TextView
+                        android:id="@+id/textView_favoriteText"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="73dp"
+                        android:layout_marginLeft="73dp"
+                        android:layout_marginTop="7dp"
+                        android:text="收藏"
+                        app:layout_constraintStart_toEndOf="@+id/afterLogin2"
+                        app:layout_constraintTop_toBottomOf="@+id/textView_favoriteNum" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
+
+
+</LinearLayout>
