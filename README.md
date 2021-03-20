@@ -1,3 +1,18 @@
+<p align="center">
+	<a href="https://github.com/GameBox4Fun/GameBox" target="_blank">
+		<img src="./image/gamebox.png" alt="GameBox logo" style="width: 200px; height: 200px">
+	</a>
+</p>
+<p align="center">
+	<img src="https://img.shields.io/badge/JDK-1.8+-orange">
+	<img src="https://img.shields.io/badge/SpringBoot-2.2.7.RELEASE-brightgreen">
+	<img src="https://img.shields.io/badge/MyBatis-3.5.5-red">
+	<img src="https://img.shields.io/badge/API-29-yellow">
+	<img src="https://img.shields.io/hexpm/l/plug">
+	<img src="https://hits.dwyl.com/GameBox4Fun/GameBox.svg">
+</p>
+
+
 ## Features
 
 仿[小黑盒](https://www.xiaoheihe.cn/)安卓APP，含界面原型设计、最新资讯爬虫
@@ -17,7 +32,7 @@
 
 
 
-##后端
+## 后端
 
 1. 核心框架：[Spring Boot](https://github.com/spring-projects/spring-boot)
 2. Token 认证：[jjwt](https://github.com/jwtk/jjwt)
@@ -39,4 +54,28 @@
 
 ## Screenshots
 
-![首页](./image/首页.png)![文章1](./image/文章1.png)![文章2](./image/文章2.png)![评论](./image/评论.png)![静态页](./image/静态页.png)![我的](./image/我的.png)![收藏夹](./image/收藏夹.png)![扫描二维码](./image/扫描二维码.png)![设置](./image/设置.png)![修改资料](./image/修改资料.png)![登录](./image/登录.png)
+<table>
+	<tr>
+		<td><img src="./image/首页.png">首页</td>
+		<td><img src="./image/文章1.png">文章1</td>
+	</tr>
+	<tr>
+		<td><img src="./image/文章2.png">文章2</td>
+		<td><img src="./image/评论.png">评论</td>
+	</tr>
+	<tr>
+		<td><img src="./image/静态页.png">静态页</td>
+		<td><img src="./image/我的.png">我的</td>
+	</tr>
+	<tr>
+		<td><img src="./image/收藏夹.png">收藏夹</td>
+		<td><img src="./image/扫描二维码.png">扫描二维码</td>
+	</tr>
+	<tr>
+		<td><img src="./image/设置.png">设置</td>
+		<td><img src="./image/修改资料.png">修改资料</td>
+	</tr>
+	<tr>
+		<td><img src="./image/登录.png">登录</td>
+		<td></td>
+</table>
