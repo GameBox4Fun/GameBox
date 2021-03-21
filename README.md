@@ -9,13 +9,13 @@
 	<img src="https://img.shields.io/badge/MyBatis-3.5.5-red">
 	<img src="https://img.shields.io/badge/API-29-yellow">
 	<img src="https://img.shields.io/hexpm/l/plug">
-	<img src="https://hits.dwyl.com/GameBox4Fun/GameBox.svg">
+	<img src="https://hits.seeyoufarm.com/api/count/incr/badge.svg?url=https%3A%2F%2Fgithub.com%2FGameBox4Fun%2FGameBox&count_bg=%2344CC11&title_bg=%23555555&icon=codesandbox.svg&icon_color=%23000000&title=hits&edge_flat=false">
 </p>
 
 
 ## Features
 
-仿[小黑盒](https://www.xiaoheihe.cn/)安卓APP，含界面原型设计、最新资讯爬虫
+仿[小黑盒](https://www.xiaoheihe.cn/)安卓APP，含后端、含界面原型设计、最新资讯爬虫
 
 主要实现功能：
 
